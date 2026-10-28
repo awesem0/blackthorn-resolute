@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /wp-admin/
-Allow: /wp-admin/admin-ajax.php
 
-# Clean XML Sitemaps (No author email slug exposure)
-Sitemap: https://blackthornresolute.co.za/sitemap.xml
-Sitemap: https://blackthornresolute.co.za/wp-sitemap.xml
+Sitemap: https://vaalmediation.co.za/sitemap.xml
