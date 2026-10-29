@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /v1.html
+Disallow: /v2.html
+Disallow: /v2-blackthornresolute.html
+Disallow: /blackthorn_redesign_v2_singlefile.html
 
 Sitemap: https://vaalmediation.co.za/sitemap.xml

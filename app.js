@@ -102,9 +102,9 @@ function renderTriageResult() {
   if (sessionsEl) sessionsEl.textContent = info.sessions;
   if (costEl) costEl.textContent = info.splitCost;
 
-  const msg = `Hi Stavros, I completed the 60-second assessment on Blackthorn Resolute:\n• Matter: ${triageState.category}\n• Current Stage: ${triageState.stage}\n• Preferred Format: ${triageState.format}\nI would like to book the Free 30-Minute Consultation.`;
+  const msg = `[VaalMediation.co.za] Hi Stavros, I completed the 60-second assessment on VaalMediation.co.za:\n• Matter: ${triageState.category}\n• Current Stage: ${triageState.stage}\n• Preferred Format: ${triageState.format}\nI would like to book the Free 30-Minute Consultation.`;
   if (waBtn) waBtn.href = `https://wa.me/27648987503?text=${encodeURIComponent(msg)}`;
-  if (mailBtn) mailBtn.href = `mailto:support@blackthornresolute.co.za?subject=${encodeURIComponent('Free 30-Min Consultation Request: ' + triageState.category)}&body=${encodeURIComponent(msg)}`;
+  if (mailBtn) mailBtn.href = `mailto:support@blackthornresolute.co.za?subject=${encodeURIComponent('[VaalMediation.co.za] Free 30-Min Consultation Request: ' + triageState.category)}&body=${encodeURIComponent(msg)}`;
 }
 
 // 5. Interactive Mediation vs. Court Cost & Time Calculator
@@ -225,13 +225,13 @@ function getBookingDetails() {
 
 function submitBookingWhatsApp() {
   const b = getBookingDetails();
-  const text = `Hi Stavros, I'd like to book a Free 30-Minute Mediation Consultation:\n• Name: ${b.name}${b.phone ? ' (' + b.phone + ')' : ''}\n• Dispute Type: ${b.type}\n• Format: ${b.mode}\n• Preferred Date/Time: ${b.date} at ${b.time} (SAST)\n${b.notes ? '• Brief Context: ' + b.notes : ''}`;
+  const text = `[VaalMediation.co.za] Hi Stavros, I'd like to book a Free 30-Minute Mediation Consultation:\n• Name: ${b.name}${b.phone ? ' (' + b.phone + ')' : ''}\n• Dispute Type: ${b.type}\n• Format: ${b.mode}\n• Preferred Date/Time: ${b.date} at ${b.time} (SAST)\n${b.notes ? '• Brief Context: ' + b.notes : ''}`;
   window.open(`https://wa.me/27648987503?text=${encodeURIComponent(text)}`, '_blank');
 }
 
 function submitBookingEmail() {
   const b = getBookingDetails();
-  const subject = `Free 30-Min Consultation Booking: ${b.type} (${b.name})`;
+  const subject = `[VaalMediation.co.za] Free 30-Min Consultation Booking: ${b.type} (${b.name})`;
   const body = `Hi Stavros,\n\nI would like to book a Free 30-Minute Mediation Consultation with Blackthorn Resolute.\n\nName: ${b.name}\nPhone / WhatsApp: ${b.phone || 'Not provided'}\nNature of Dispute: ${b.type}\nPreferred Format: ${b.mode}\nPreferred Date & Time (SAST): ${b.date} at ${b.time}\nBrief Notes: ${b.notes || 'None'}\n\nKind regards,\n${b.name}`;
   window.location.href = `mailto:support@blackthornresolute.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
