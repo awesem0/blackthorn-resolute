@@ -23,6 +23,8 @@ html{scroll-behavior:smooth}
 <link rel="canonical" href="https://vaalmediation.co.za/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="google-site-verification" content="_E83uyV6b2dhOPWpymuxJqHmCuoD6ckwEOdWodsKrVY" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18543809384"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18543809384');</script>
 <meta name="author" content="Stavros Gazis — Blackthorn Resolute">
 <meta name="geo.region" content="ZA-GP">
 <meta name="geo.placename" content="Vanderbijlpark, Vereeniging, Sasolburg, Meyerton, Three Rivers, Vaal Triangle, Sedibeng, Gauteng">
@@ -597,6 +599,22 @@ html{scroll-behavior:smooth}
   }
   btns.forEach(function (b) { b.addEventListener('click', function () { pick(Number(b.dataset.hours)); }); });
   pick(4);
+})();
+</script>
+<script>
+(function(){
+  var L={wa:'AW-18543809384/sWnQCI6hga4dEOimsIpF',tel:'AW-18543809384/Uli4CImiga4dEOimsIpF',mail:'AW-18543809384/Lr-fCIyiga4dEOimsIpF'};
+  document.addEventListener('click',function(e){
+    try{
+      var a=e.target&&e.target.closest?e.target.closest('a[href]'):null;
+      if(!a)return;
+      var h=(a.getAttribute('href')||'').trim(),hl=h.toLowerCase(),id=null;
+      if(hl.indexOf('wa.me/')>-1||hl.indexOf('api.whatsapp.com')>-1)id=L.wa;
+      else if(hl.indexOf('tel:')===0)id=L.tel;
+      else if(hl.indexOf('mailto:')===0)id=L.mail;
+      if(id&&typeof gtag==='function')gtag('event','conversion',{send_to:id,transport_type:'beacon'});
+    }catch(err){}
+  },true);
 })();
 </script>
 </body>
